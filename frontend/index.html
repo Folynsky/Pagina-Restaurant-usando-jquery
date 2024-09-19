@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Script & Sip</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script & Sip</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Bienvenido Script & Sip</h1>
-    <nav>
-      <ul>
-        <li><a href="#catalogo">Catálogo</a></li>
-        <li><a href="#carrito">Carrito</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="catalogo">
-    <!-- Productos del catálogo -->
-  </section>
+    <header>
+        <h1>Bienvenido a Script & Sip</h1>
+        <nav>
+            <ul>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section id="carrito">
-    <!-- Carrito de compra -->
-  </section>
+    
+    <main>
+        <section id="principal">
+            <h2>¡Explora nuestros deliciosos productos!</h2>
+            <p>En Script & Sip ofrecemos una variedad de bebidas y comidas para disfrutar en cualquier momento. Navega por nuestro catálogo o contáctanos si tienes alguna pregunta.</p>
+        </section>
 
-  <footer>
-    <p>© 2024 Nombre del Restaurante</p>
-  </footer>
+        <section id="catalogo" class="grid-container">
+            <h2>Catálogo</h2>
+            <div id="productos">
+                <!-- Productos del catálogo se cargarán aquí dinámicamente -->
+            </div>
+        </section>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="app.js"></script>
+        <section id="carrito">
+            <h2>Carrito de Compras</h2>
+            <div id="carrito-content">
+                <!-- Items del carrito se mostrarán aquí -->
+            </div>
+            <a href="#catalogo" data-role="button" data-icon="arrow-l">Seguir comprando</a>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" placeholder="Tu correo" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Script & Sip</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
