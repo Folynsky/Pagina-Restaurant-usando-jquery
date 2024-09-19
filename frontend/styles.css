@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  .producto img {
+    max-width: 200px;  /* Limita el ancho máximo a 200px */
+    height: auto;      /* Mantiene la proporción de la imagen */
+  }
+  
+  
+  /* Media queries para dispositivos móviles */
+  @media (max-width: 600px) {
+    nav ul li {
+      display: block;
+      margin: 0;
+    }
+  }
+  
