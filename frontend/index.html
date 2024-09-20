@@ -1,69 +1,1044 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script & Sip</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 
-    <header>
-        <h1>Bienvenido a Script & Sip</h1>
-        <nav>
-            <ul>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#carrito">Carrito</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    
-    <main>
-        <section id="principal">
-            <h2>¡Explora nuestros deliciosos productos!</h2>
-            <p>En Script & Sip ofrecemos una variedad de bebidas y comidas para disfrutar en cualquier momento. Navega por nuestro catálogo o contáctanos si tienes alguna pregunta.</p>
-        </section>
-
-        <section id="catalogo" class="grid-container">
-            <h2>Catálogo</h2>
-            <div id="productos">
-                <!-- Productos del catálogo se cargarán aquí dinámicamente -->
+    <title>Sip & Script</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- start header -->
+      <header class="header" id="myHeader">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-6 col-md-4 col-lg-2">
+              <div class="logo">
+                <a href="index.html">
+                  <img
+                    src="assets/images/logo/logo.jfif"
+                    alt="Logo"
+                    class="img-fluid"
+                  />
+                </a>
+              </div>
             </div>
-        </section>
-
-        <section id="carrito">
-            <h2>Carrito de Compras</h2>
-            <div id="carrito-content">
-                <!-- Items del carrito se mostrarán aquí -->
+            <div class="col-6 col-md-8 col-lg-10">
+              <!-- nav items starts   -->
+              <nav class="navbar navbar-expand-lg nabar-own p-8">
+                <button
+                  class="navbar-toggler collapsed"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon">
+                    <span class="menu_line_1"></span>
+                    <span class="menu_line_2"></span>
+                    <span class="menu_line_3"></span>
+                  </span>
+                </button>
+                <div
+                  class="collapse navbar-collapse tr-nabar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav mr-auto align-self-center">
+                    <li class="nav-item tr-nav-item">
+                      <a href="#Special" class="nav-link">Nuetra Especialidad</a>
+                    </li>
+                    <li class="nav-item tr-nav-item">
+                      <a href="#menu" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item tr-nav-item">
+                      <a href="#feedback" class="nav-link">Comentarios</a>
+                    </li>
+                    <li class="nav-item tr-nav-item">
+                      <a href="#contact" class="nav-link">Contacto</a>
+                    </li>
+                  </ul>
+                  <div class="header-search">
+                    <input
+                      type="text"
+                      class="form-control header-input"
+                      placeholder="Search here ..."
+                    />
+                    <span class="search-icon">
+                      <i class="fas fa-search"></i>
+                    </span>
+                    <span class="close-icon"><i class="fas fa-times"></i></span>
+                  </div>
+                </div>
+              </nav>
             </div>
-            <a href="#catalogo" data-role="button" data-icon="arrow-l">Seguir comprando</a>
-        </section>
+          </div>
+        </div>
+      </header>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form id="contact-form">
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Tu nombre" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Tu correo" required>
-                
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <!-- End header -->
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+      <section class="home-slider">
+        <div
+          class="home-slider-image wow fadeInRight col-xl-5 col-lg-6 col-md-6 col-12 p-0"
+          data-wow-duration="2s"
+          data-wow-delay="1s"
+        >
+          <img
+            src="assets/images/silders/coffeCup.png"
+            alt="BG Image"
+            class="img-fluid"
+            data-wow-delay="1s"
+          />
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-11 col-md-6 col-lg-9 col-xl-10">
+              <div class="slider-content">
+                <span
+                  class="wow fadeInDown"
+                  data-wow-duration="1s"
+                  data-wow-delay="0.3s"
+                >
+                  Espresso Cargado
+                </span>
+                <h1
+                  class="wow fadeInDown"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                >
+                  Perfecto para codear
+                </h1>
+                <p
+                  class="mb-0 wow fadeIn"
+                  data-wow-duration="2s"
+                  data-wow-delay="0.4s"
+                >
+                  This is a paragraph for Lorem ipsum dolor sit amet,
+                  consectetur adipisicing elit. Maxime aut, voluptas expedita
+                  quisquam sequi dignissimos dicta officia, nemo illo itaque
+                  adipisci. Tempora ut ab nam! Quidem voluptatum rerum quaerat
+                  obcaecati.
+                </p>
+              </div>
+              <div
+                class="slider-video-section wow fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay="0.4s"
+              >
+                <div class="slider-obutton">
+                  <button class="btn">Ordena Ahora</button>
+                </div>
+                <div class="slider-pbutton">
+                  <div
+                    class="play-button"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                  >
+                    <img
+                      src="assets/images/silders/paly-icon.png"
+                      alt="play button"
+                    />
+                  </div>
+                  <p class="mb-0 ml-4">Somos Sip & Script</p>
 
-    <footer>
-        <p>© 2024 Script & Sip</p>
+                  <!-- modal section starts  -->
+                  <div
+                    id="exampleModalCenter"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-hidden="true"
+                    class="modal fade"
+                  >
+                    <div
+                      class="modal-dialog modal-dialog-centered modal-lg"
+                      role="document"
+                    >
+                      <div class="modal-content">
+                        <button
+                          type="button"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                          class="close"
+                        >
+                          <i class="fas fa-window-close"></i>
+                        </button>
+                        <div class="modal-body">
+                          <video controls width="727" height="600">
+                            <source src="assets/videos/" type="video/mp4" />
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- modal section ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- slider section ends here -->
+
+      <!-- Our specialities items starts  -->
+
+      <section class="specialities position-relative" id="Special">
+        <h2 class="d-none">hidden</h2>
+        <div class="shape-image-one">
+          <img
+            src="assets/images/background-shape/dottd-squre.png"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+        <div class="container">
+          <div class="row specialities-top">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <h2 class="mb-0">Nuestra Especialidad</h2>
+              </div>
+              <p
+                class="wow fadeIn"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                This is a paragraph for Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Maxime aut, voluptas expedita quisquam sequi
+                dignissimos dicta officia, nemo illo itaque adipisci. Tempora ut
+                ab nam! Quidem voluptatum rerum quaerat obcaecati.
+              </p>
+            </div>
+          </div>
+          <div class="row specialities-section">
+            <div class="col-12 col-md-6 col-lg-5">
+              <div
+                class="specialities-image wow fadeInLeft"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <img src="assets/images/specialities/s1.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-1 d-lg-block d-none p-0"></div>
+            <div class="col-12 col-md-6 col-lg-6 p-lg-0 specialities-column">
+              <div
+                class="wow fadeInRight"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <h3 class="mb-0">Delicioso cafe de especialidad</h3>
+              </div>
+              <p
+                class="wow fadeIn mb-0"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                This is a paragraph for Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Maxime aut, voluptas expedita quisquam sequi
+                dignissimos dicta officia, nemo illo itaque adipisci. Tempora ut
+                ab nam! Quidem voluptatum rerum quaerat obcaecati.
+              </p>
+            </div>
+          </div>
+          <div class="row specialities-section">
+            <div
+              class="col-12 col-md-6 col-lg-6 p-lg-0 specialities-column specialities-middle"
+            >
+              <div
+                class="wow fadeInLeft"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <h3 class="mb-0">Haz tus sesiones de codigo algo especial</h3>
+              </div>
+              <p
+                class="wow fadeIn mb-0"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                This is a paragraph for Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Maxime aut, voluptas expedita quisquam sequi
+                dignissimos dicta officia, nemo illo itaque adipisci. Tempora ut
+                ab nam! Quidem voluptatum rerum quaerat obcaecati.
+              </p>
+            </div>
+            <div class="col-12 col-lg-1 d-lg-block d-none p-0"></div>
+            <div class="col-12 col-md-6 col-lg-5">
+              <div
+                class="specialities-image wow fadeInRight"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <img src="assets/images/specialities/s2.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="row specialities-section">
+            <div class="col-12 col-md-6 col-lg-5">
+              <div
+                class="specialities-image wow fadeInLeft"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <img src="assets/images/specialities/s3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="col-12 col-lg-1 d-lg-block d-none p-0"></div>
+            <div class="col-12 col-md-6 col-lg-6 p-lg-0 specialities-column">
+              <div
+                class="wow fadeInRight"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <h3 class="mb-0">Servimos lo mejor.</h3>
+              </div>
+              <p
+                class="wow fadeIn mb-0"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                This is a paragraph for Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Maxime aut, voluptas expedita quisquam sequi
+                dignissimos dicta officia, nemo illo itaque adipisci. Tempora ut
+                ab nam! Quidem voluptatum rerum quaerat obcaecati.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our specialities items ends  -->
+
+      <section id="menu" class="our-item-section position-relative">
+        <h2 class="d-none">hidden</h2>
+        <div class="shape-image-two">
+          <img src="assets/images/background-shape/dottd-squre.png" alt="" />
+        </div>
+        <div class="container">
+          <div class="row specialities-top">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div
+                class="wow fadeInDown"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <h2 class="mb-0">Nuestros Cafés</h2>
+              </div>
+              <p
+                class="wow fadeIn"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                Descubre nuestra selección de cafés especiales, elaborados con
+                granos de alta calidad y métodos artesanales para brindarte una
+                experiencia única en cada sorbo.
+              </p>
+            </div>
+          </div>
+          <div class="row mx-md-0">
+            <div class="col-12 col-md-4 col-lg-3 p-lg-0">
+              <ul
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+                class="our-item-tab nav-tabs nav flex-column pl-0 wow fadeIn"
+              >
+                <li class="nav-item">
+                  <a href="#espresso" data-toggle="tab" class="nav-link active"
+                    >Espresso</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#americano" data-toggle="tab" class="nav-link"
+                    >Americano</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#latte" data-toggle="tab" class="nav-link">Latte</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#cappuccino" data-toggle="tab" class="nav-link"
+                    >Cappuccino</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#mocha" data-toggle="tab" class="nav-link">Mocha</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-1 d-lg-block d-none p-0"></div>
+            <div class="col-12 col-md-8 col-lg-8 p-lg-0">
+              <div class="tab-content" id="tabs">
+                <div class="tab-pane active" id="espresso">
+                  <div class="our-item-slider espresso-slider">
+                    <div class="our-item">
+                      <div class="our-item-inner">
+                        <div
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                          class="wow fadeInRight"
+                        >
+                          <h3 class="mb-0">Espresso Doble</h3>
+                        </div>
+                        <div class="item_order">
+                          <p
+                            class="wow fadeIn mb-0"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            Un shot de espresso intenso, perfecto para los
+                            amantes del café puro y fuerte.
+                          </p>
+                          <div
+                            class="our-item-button wow fadeIn"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            <button class="btn">Ordenar Ahora</button>
+                          </div>
+                        </div>
+                        <div
+                          class="our-item-image wow fadeIn"
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                        >
+                          <img
+                            src="assets/images/our-item/coffee/espresso.jpg"
+                            alt=""
+                          />
+                          <div class="item-price">$2.50</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="our-item">
+                      <div class="our-item-inner">
+                        <div
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                          class="wow fadeInRight"
+                        >
+                          <h3 class="mb-0">Espresso Macchiato</h3>
+                        </div>
+                        <div class="item_order">
+                          <p
+                            class="wow fadeIn mb-0"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            Un espresso con un toque de espuma de leche para
+                            equilibrar su intensidad.
+                          </p>
+                          <div
+                            class="our-item-button wow fadeIn"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            <button class="btn">Ordenar Ahora</button>
+                          </div>
+                        </div>
+                        <div
+                          class="our-item-image wow fadeIn"
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                        >
+                          <img
+                            src="assets/images/our-item/coffee/macchiato.jpg"
+                            alt=""
+                          />
+                          <div class="item-price">$2.80</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="americano">
+                  <div class="our-item-slider americano-slider">
+                    <div class="our-item">
+                      <div class="our-item-inner">
+                        <div
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                          class="wow fadeInRight"
+                        >
+                          <h3 class="mb-0">Café Americano</h3>
+                        </div>
+                        <div class="item_order">
+                          <p
+                            class="wow fadeIn mb-0"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            Un café suave y equilibrado, preparado con un shot
+                            de espresso y agua caliente.
+                          </p>
+                          <div
+                            class="our-item-button wow fadeIn"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            <button class="btn">Ordenar Ahora</button>
+                          </div>
+                        </div>
+                        <div
+                          class="our-item-image wow fadeIn"
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                        >
+                          <img
+                            src="assets/images/our-item/coffee/americano.jpg"
+                            alt=""
+                          />
+                          <div class="item-price">$3.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="latte">
+                  <div class="our-item-slider latte-slider">
+                    <div class="our-item">
+                      <div class="our-item-inner">
+                        <div
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                          class="wow fadeInRight"
+                        >
+                          <h3 class="mb-0">Café Latte</h3>
+                        </div>
+                        <div class="item_order">
+                          <p
+                            class="wow fadeIn mb-0"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            Un clásico latte, donde el espresso se combina con
+                            leche vaporizada para un sabor suave y cremoso.
+                          </p>
+                          <div
+                            class="our-item-button wow fadeIn"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            <button class="btn">Ordenar Ahora</button>
+                          </div>
+                        </div>
+                        <div
+                          class="our-item-image wow fadeIn"
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                        >
+                          <img
+                            src="assets/images/our-item/coffee/latte.jpg"
+                            alt=""
+                          />
+                          <div class="item-price">$3.50</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="cappuccino">
+                  <div class="our-item-slider cappuccino-slider">
+                    <div class="our-item">
+                      <div class="our-item-inner">
+                        <div
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                          class="wow fadeInRight"
+                        >
+                          <h3 class="mb-0">Cappuccino</h3>
+                        </div>
+                        <div class="item_order">
+                          <p
+                            class="wow fadeIn mb-0"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            Un equilibrio perfecto entre espresso, leche
+                            vaporizada y espuma, con un toque de cacao en polvo.
+                          </p>
+                          <div
+                            class="our-item-button wow fadeIn"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            <button class="btn">Ordenar Ahora</button>
+                          </div>
+                        </div>
+                        <div
+                          class="our-item-image wow fadeIn"
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                        >
+                          <img
+                            src="assets/images/our-item/coffee/cappuccino.jpg"
+                            alt=""
+                          />
+                          <div class="item-price">$3.80</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="mocha">
+                  <div class="our-item-slider mocha-slider">
+                    <div class="our-item">
+                      <div class="our-item-inner">
+                        <div
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                          class="wow fadeInRight"
+                        >
+                          <h3 class="mb-0">Café Mocha</h3>
+                        </div>
+                        <div class="item_order">
+                          <p
+                            class="wow fadeIn mb-0"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            Un delicioso café con chocolate, leche vaporizada y
+                            crema batida para los amantes del dulce.
+                          </p>
+                          <div
+                            class="our-item-button wow fadeIn"
+                            data-wow-duration="2s"
+                            data-wow-delay="0.4s"
+                          >
+                            <button class="btn">Ordenar Ahora</button>
+                          </div>
+                        </div>
+                        <div
+                          class="our-item-image wow fadeIn"
+                          data-wow-duration="2s"
+                          data-wow-delay="0.4s"
+                        >
+                          <img
+                            src="assets/images/our-item/coffee/mocha.jpg"
+                            alt=""
+                          />
+                          <div class="item-price">$4.00</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonial section  -->
+      <section class="testimonials position-relative" id="feedback">
+        <h2 class="d-none">hidden</h2>
+        <div class="shape-image-three">
+          <img src="assets/images/background-shape/dottd-squre.png" alt="" />
+        </div>
+        <div class="container">
+          <div class="row specialities-top">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div
+                class="wow fadeInDown"
+                data-wow-delay="0.4s"
+                data-wow-duration="2s"
+              >
+                <h2 class="mb-0">Our Happy User</h2>
+              </div>
+              <p
+                class="wow fadeIn marg"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+                voluptatibus praesentium mollitia non ut inventore in
+                exercitationem id doloremque voluptate.
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6">
+              <div id="testimonials-slider-pager">
+                <div class="testimonials-slider-pager-one">
+                  <a href="#" class="pager-item" data-slide-index="0"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="1"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="2"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                </div>
+                <div class="testimonials-slider-pager-two">
+                  <a href="#" class="pager-item" data-slide-index="3"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="4"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="5"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                </div>
+                <div class="testimonials-slider-pager-three">
+                  <a href="#" class="pager-item" data-slide-index="0"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="1"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="2"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="3"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="4"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                  <a href="#" class="pager-item" data-slide-index="5"
+                    ><img
+                      src="assets/images/testiomonial/1.webp"
+                      class="img-fluid"
+                      alt=""
+                  /></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6">
+              <ul
+                class="slider testimonials-slider wow fadeInwow fadeIn"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                <li class="slide-item">
+                  <div class="quote-image">
+                    <img
+                      src="assets/images/testiomonial/quote-left.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single-testi-one">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex debitis nobis esse at obcaecati recusandae nam
+                      laboriosam enim id officiis.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis officia eaque earum excepturi expedita et porro
+                      incidunt deserunt, veniam fugit?
+                    </p>
+                    <h3 class="mb-0">NombreEjemplo</h3>
+                    <span>MD</span>
+                  </div>
+                </li>
+                <li class="slide-item">
+                  <div class="quote-image">
+                    <img
+                      src="assets/images/testiomonial/quote-left.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single-testi-one">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex debitis nobis esse at obcaecati recusandae nam
+                      laboriosam enim id officiis.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis officia eaque earum excepturi expedita et porro
+                      incidunt deserunt, veniam fugit?
+                    </p>
+                    <h3 class="mb-0">NombreEjemplo</h3>
+                    <span>CLO</span>
+                  </div>
+                </li>
+                <li class="slide-item">
+                  <div class="quote-image">
+                    <img
+                      src="assets/images/testiomonial/quote-left.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single-testi-one">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex debitis nobis esse at obcaecati recusandae nam
+                      laboriosam enim id officiis.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis officia eaque earum excepturi expedita et porro
+                      incidunt deserunt, veniam fugit?
+                    </p>
+                    <h3 class="mb-0">NombreEjemplo</h3>
+                    <span>COO</span>
+                  </div>
+                </li>
+                <li class="slide-item">
+                  <div class="quote-image">
+                    <img
+                      src="assets/images/testiomonial/quote-left.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single-testi-one">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex debitis nobis esse at obcaecati recusandae nam
+                      laboriosam enim id officiis.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis officia eaque earum excepturi expedita et porro
+                      incidunt deserunt, veniam fugit?
+                    </p>
+                    <h3 class="mb-0">NombreEjemplo</h3>
+                    <span>CTO</span>
+                  </div>
+                </li>
+                <li class="slide-item">
+                  <div class="quote-image">
+                    <img
+                      src="assets/images/testiomonial/quote-left.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single-testi-one">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex debitis nobis esse at obcaecati recusandae nam
+                      laboriosam enim id officiis.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis officia eaque earum excepturi expedita et porro
+                      incidunt deserunt, veniam fugit?
+                    </p>
+                    <h3 class="mb-0">NombreEjemplo</h3>
+                    <span>CFO</span>
+                  </div>
+                </li>
+                <li class="slide-item">
+                  <div class="quote-image">
+                    <img
+                      src="assets/images/testiomonial/quote-left.png"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </div>
+                  <div class="single-testi-one">
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Ex debitis nobis esse at obcaecati recusandae nam
+                      laboriosam enim id officiis.
+                    </p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Veritatis officia eaque earum excepturi expedita et porro
+                      incidunt deserunt, veniam fugit?
+                    </p>
+                    <h3 class="mb-0">NombreEjemplo</h3>
+                    <span>CEO</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- email section  -->
+      <section class="email-subscription position-relative" id="contact">
+        <div class="container">
+          <div class="row specialities-top">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div
+                class="wow fadeInDown"
+                data-wow-delay="0.4s"
+                data-wow-duration="2s"
+              >
+                <h2 class="mb-0">Quieres mantenerte actualizado?</h2>
+              </div>
+              <p
+                class="wow fadeIn marg"
+                data-wow-duration="2s"
+                data-wow-delay="0.4s"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo
+                voluptatibus praesentium mollitia non ut inventore in
+                exercitationem id doloremque voluptate.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-6">
+              <form action="#" class="email-form">
+                <div class="form-group position-relative mb-0">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your Emai Id"
+                  />
+                  <button
+                    type="submit"
+                    class="btn btn-primary email-form-button"
+                  >
+                    Enviar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer section  -->
+    <footer
+      class="position-relative wow fadeIn"
+      data-wow-duration="2s"
+      data-wow-delay="0.4s"
+    >
+      <div class="footer-bottom">
+        <div class="container position-relative">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12">
+              <div class="footer-menu text-center">
+                <ul>
+                  <li class="nav-item">
+                    <a href="#Special" class="nav-link">Nuestra Especialidad</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#menu" class="nav-link">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#feedback" class="nav-link">Comentarios</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 text-center">
+              <div class="footer-logo">
+                <img src="assets/images/logo/logo.jfif" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 footer-icon text-center">
+              <a href="#" class="fb-ic">
+                <i
+                  class="fab fa-facebook-f mr-2 mr-md-5 wow fadeInDown"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                ></i>
+              </a>
+              <a href="#" class="tw-ic">
+                <i
+                  class="fab fa-twitter mr-2 mr-md-5 wow fadeInUp"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                ></i>
+              </a>
+              <a href="#" class="ins-ic">
+                <i
+                  class="fab fa-instagram mr-2 mr-md-5 wow fadeInDown"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                ></i>
+              </a>
+              <a href="#" class="pin-ic">
+                <i
+                  class="fab fa-pinterest mr-2 mr-md-5 wow fadeInUp"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                ></i>
+              </a>
+              <a href="#" class="sn-ic">
+                <i
+                  class="fab fa-snapchat mr-2 mr-md-5 wow fadeInDown"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.4s"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="app.js"></script>
-</body>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/bx-slider/jquery.bxslider.js"></script>
+    <script src="assets/js/bx-slider/jquery.easing.1.3.js"></script>
+    <script src="assets/js/bx-slider/jquery.fitvids.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+      new WOW().init();
+    </script>
+    
+  </body>
 </html>
